@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS工具对比表格</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        thead {
+            background-color: #f8f9fa;
+        }
+        th {
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        tbody tr:hover {
+            background-color: #f0f8ff;
+            transition: background-color 0.2s;
+        }
+        .tool-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .tool-name a {
+            color: #007bff;
+            text-decoration: none;
+            border-bottom: 1px dotted #007bff;
+        }
+        .tool-name a:hover {
+            color: #0056b3;
+            border-bottom: 1px solid #0056b3;
+        }
+        .price {
+            font-weight: 500;
+        }
+        .price.free {
+            color: #28a745;
+        }
+        .price.paid {
+            color: #fd7e14;
+        }
+        .price.mixed {
+            color: #6f42c1;
+        }
+        .rating {
+            font-size: 16px;
+            text-align: center;
+        }
+        .type-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .type-online { background-color: #e3f2fd; color: #1976d2; }
+        .type-desktop { background-color: #f3e5f5; color: #7b1fa2; }
+        .type-opensource { background-color: #e8f5e8; color: #388e3c; }
+        .type-browser { background-color: #fff3e0; color: #f57c00; }
+        .type-api { background-color: #fce4ec; color: #c2185b; }
+        
+        @media (max-width: 768px) {
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 8px 4px;
+            }
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 在线语音合成工具对比</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>工具名称</th>
+                    <th>类型</th>
+                    <th>平台支持</th>
+                    <th>主要特点</th>
+                    <th>价格</th>
+                    <th>推荐指数</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://azure.microsoft.com/zh-cn/products/ai-services/ai-speech" target="_blank">微软Azure官网Demo</a>
+                    </td>
+                    <td><span class="type-tag type-online">在线工具</span></td>
+                    <td>Web</td>
+                    <td>官方演示，音质最佳，支持18种中文声音</td>
+                    <td class="price free">免费试用</td>
+                    <td class="rating">⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://github.com/liuzhiyuan123/SpeechSynthesisAssistant" target="_blank">微软语音合成助手 v5.1</a>
+                    </td>
+                    <td><span class="type-tag type-desktop">桌面软件</span></td>
+                    <td>Windows</td>
+                    <td>转换速度快，支持自定义VITS模型，支持字幕导出</td>
+                    <td class="price free">免费</td>
+                    <td class="rating">⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://github.com/LokerL/tts-vue" target="_blank">TTS-Vue</a>
+                    </td>
+                    <td><span class="type-tag type-opensource">开源软件</span></td>
+                    <td>Windows / macOS</td>
+                    <td>支持SSML标记语音，批量转换，大文件切片</td>
+                    <td class="price free">免费开源</td>
+                    <td class="rating">⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://www.52pojie.cn/" target="_blank">吾爱版语音合成助手 v1.5.1</a>
+                    </td>
+                    <td><span class="type-tag type-desktop">桌面软件</span></td>
+                    <td>Windows</td>
+                    <td>集成微软、火山、阿里三种引擎，支持SRT字幕导入</td>
+                    <td class="price free">免费</td>
+                    <td class="rating">⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">Edge浏览器朗读</a>
+                    </td>
+                    <td><span class="type-tag type-browser">浏览器功能</span></td>
+                    <td>Windows / macOS / Linux</td>
+                    <td>浏览器自带，无需安装，支持多语音选择</td>
+                    <td class="price free">免费</td>
+                    <td class="rating">⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://github.com/jianchang512/edge-tts-record" target="_blank">Edge-TTS-record</a>
+                    </td>
+                    <td><span class="type-tag type-opensource">开源工具</span></td>
+                    <td>跨平台</td>
+                    <td>录制Edge语音合成，输出.wav格式</td>
+                    <td class="price free">免费开源</td>
+                    <td class="rating">⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://ttsmaker.cn/" target="_blank">TTSMaker</a>
+                    </td>
+                    <td><span class="type-tag type-online">在线工具</span></td>
+                    <td>Web</td>
+                    <td>免费在线TTS，支持多语音，100%商业使用权</td>
+                    <td class="price mixed">免费/付费</td>
+                    <td class="rating">⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://ai.baidu.com/tech/speech/tts" target="_blank">百度AI语音合成</a>
+                    </td>
+                    <td><span class="type-tag type-api">API服务</span></td>
+                    <td>Web / API</td>
+                    <td>百度自研技术，支持离线和在线模式</td>
+                    <td class="price mixed">免费额度+付费</td>
+                    <td class="rating">⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://ai.aliyun.com/nls/tts" target="_blank">阿里云语音合成</a>
+                    </td>
+                    <td><span class="type-tag type-api">API服务</span></td>
+                    <td>Web / API</td>
+                    <td>高拟真度，多音色选择，可调节语速语调音量</td>
+                    <td class="price paid">按量付费</td>
+                    <td class="rating">⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://www.xfyun.cn/services/online_tts" target="_blank">讯飞语音合成</a>
+                    </td>
+                    <td><span class="type-tag type-online">在线工具/API</span></td>
+                    <td>Web / API</td>
+                    <td>100+发音人，支持多语种、多方言、中英混合</td>
+                    <td class="price mixed">免费试用+付费</td>
+                    <td class="rating">⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://text-to-speech.cn/" target="_blank">Text-to-Speech.cn</a>
+                    </td>
+                    <td><span class="type-tag type-online">在线工具</span></td>
+                    <td>Web</td>
+                    <td>简单易用的在线文字转语音工具</td>
+                    <td class="price free">免费</td>
+                    <td class="rating">⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td class="tool-name">
+                        <a href="https://www.narakeet.com/" target="_blank">Narakeet</a>
+                    </td>
+                    <td><span class="type-tag type-online">在线工具</span></td>
+                    <td>Web</td>
+                    <td>支持100种语音，800种声音，可制作视频</td>
+                    <td class="price paid">付费</td>
+                    <td class="rating">⭐⭐⭐</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 5px; font-size: 12px; color: #666;">
+            <p><strong>说明：</strong></p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+                <li>点击工具名称可直接访问官网</li>
+                <li>部分开源工具链接指向GitHub项目页面</li>
+                <li>价格标记：<span class="price free">绿色为免费</span>、<span class="price paid">橙色为付费</span>、<span class="price mixed">紫色为混合模式</span></li>
+                <li>推荐指数仅供参考，请根据具体需求选择合适工具</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -10,6 +10,8 @@ category:
 
 ### 中文教程
 - [廖雪峰的区块链教程](https://liaoxuefeng.com/books/blockchain/introduction/index.html) - 适合初学者的区块链入门教程
+- [【清华大学区块链课】深入浅出讲web3：从比特币到区块链（全14讲）](https://www.bilibili.com/video/BV1mL411a7jo/?p=3&share_source=copy_web&vd_source=2d29a02d756b0a9a6b3894dc1382844a) - 适合初学者的区块链入门教程
+- [北京大学肖臻老师《区块链技术与应用》公开课](https://www.bilibili.com/video/BV1Vt411X7JF/?p=5&share_source=copy_web&vd_source=2d29a02d756b0a9a6b3894dc1382844a) - 适合初学者的区块链偏向技术和原理篇
 - [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide/) - 全面的区块链技术指南
 - [精通比特币（中文版）](https://github.com/tianmingyun/MasterBitcoin2CN) - 《Mastering Bitcoin》中文翻译版
 
@@ -26,6 +28,7 @@ category:
 - **比特币现金 (BCH)**: [https://github.com/bitcoin-cash-node](https://github.com/bitcoin-cash-node)
 
 ### 以太坊生态
+- **以太坊 (ETH)官网**: [https://ethereum.org/](https://ethereum.org/)
 - **以太坊 (ETH)**: [https://github.com/ethereum](https://github.com/ethereum)
 - **以太经典 (ETC)**: [https://github.com/ethereumproject](https://github.com/ethereumproject)
 
@@ -72,7 +75,7 @@ category:
 
 ### 在线课程
 - [MIT区块链课程](https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/) - MIT免费公开课
-- [Coursera区块链专业课程](https://www.coursera.org/specializations/blockchain) - 系统性学习区块链
+- [Coursera区块链专业课程(后续需要支付)](https://www.coursera.org/specializations/blockchain) - 系统性学习区块链
 - [edX区块链基础](https://www.edx.org/course/blockchain-fundamentals) - Berkeley大学区块链课程
 
 ### 技术博客与社区

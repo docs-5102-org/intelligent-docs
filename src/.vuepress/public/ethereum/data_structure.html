@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>区块链数据结构</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .blockchain {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+        
+        .block {
+            min-width: 280px;
+            margin: 0 10px;
+            border: 3px solid #3498db;
+            border-radius: 10px;
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .block:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .block-header {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 7px 7px 0 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .header-content {
+            background: #2980b9;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        
+        .field {
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .field-name {
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+        
+        .field-value {
+            color: #bdc3c7;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .block-body {
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 0 0 7px 7px;
+        }
+        
+        .merkle-tree {
+            background: white;
+            border: 2px solid #e74c3c;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .merkle-title {
+            text-align: center;
+            color: #e74c3c;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .tree-level {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .tree-node {
+            background: #e74c3c;
+            color: white;
+            padding: 8px 12px;
+            margin: 0 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-family: 'Courier New', monospace;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .tree-node.leaf {
+            background: #27ae60;
+        }
+        
+        .tree-lines {
+            position: absolute;
+            top: -8px;
+            left: 0;
+            right: 0;
+            height: 16px;
+            pointer-events: none;
+        }
+        
+        .transaction {
+            background: #27ae60;
+            color: white;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-size: 11px;
+        }
+        
+        .hash-display {
+            font-family: 'Courier New', monospace;
+            background: #34495e;
+            color: #ecf0f1;
+            padding: 5px;
+            border-radius: 3px;
+            margin: 5px 0;
+            font-size: 10px;
+            word-break: break-all;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+        
+        .features {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .features h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .blockchain {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .block:not(:last-child)::after {
+                content: '↓';
+                right: 50%;
+                top: 100%;
+                transform: translateX(50%);
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>区块链数据结构可视化</h1>
+        
+        <!-- 区块链结构 -->
+        <div class="blockchain">
+            <div class="block">
+                <div class="block-header">创世区块 (Block #0)</div>
+                <div class="header-content">
+                    <div class="field">
+                        <span class="field-name">版本:</span>
+                        <span class="field-value">1.0</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">前区块哈希:</span>
+                        <span class="field-value">0000...0000</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">默克尔根:</span>
+                        <span class="field-value">a1b2...c3d4</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">时间戳:</span>
+                        <span class="field-value">1640995200</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">难度:</span>
+                        <span class="field-value">0x1d00ffff</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">随机数:</span>
+                        <span class="field-value">2083236893</span>
+                    </div>
+                </div>
+                <div class="block-body">
+                    <div class="transaction">交易1: Alice → Bob (10 BTC)</div>
+                    <div class="transaction">交易2: Bob → Charlie (5 BTC)</div>
+                    <div class="hash-display">区块哈希: 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f</div>
+                </div>
+            </div>
+            
+            <div class="block">
+                <div class="block-header">区块 #1</div>
+                <div class="header-content">
+                    <div class="field">
+                        <span class="field-name">版本:</span>
+                        <span class="field-value">1.0</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">前区块哈希:</span>
+                        <span class="field-value">000000...ce26f</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">默克尔根:</span>
+                        <span class="field-value">e5f6...g7h8</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">时间戳:</span>
+                        <span class="field-value">1640995800</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">难度:</span>
+                        <span class="field-value">0x1d00ffff</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">随机数:</span>
+                        <span class="field-value">2573394689</span>
+                    </div>
+                </div>
+                <div class="block-body">
+                    <div class="transaction">交易3: Charlie → David (3 BTC)</div>
+                    <div class="transaction">交易4: David → Eve (2 BTC)</div>
+                    <div class="hash-display">区块哈希: 00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048</div>
+                </div>
+            </div>
+            
+            <div class="block">
+                <div class="block-header">区块 #2</div>
+                <div class="header-content">
+                    <div class="field">
+                        <span class="field-name">版本:</span>
+                        <span class="field-value">1.0</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">前区块哈希:</span>
+                        <span class="field-value">000000...b6048</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">默克尔根:</span>
+                        <span class="field-value">i9j0...k1l2</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">时间戳:</span>
+                        <span class="field-value">1640996400</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">难度:</span>
+                        <span class="field-value">0x1d00ffff</span>
+                    </div>
+                    <div class="field">
+                        <span class="field-name">随机数:</span>
+                        <span class="field-value">1639830024</span>
+                    </div>
+                </div>
+                <div class="block-body">
+                    <div class="transaction">交易5: Eve → Frank (1 BTC)</div>
+                    <div class="transaction">交易6: Frank → Alice (0.5 BTC)</div>
+                    <div class="hash-display">区块哈希: 000000006a625f06636b8bb6ac7b960a8d03705d1ace08b1a19da3fdcc99ddbd</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 默克尔树结构 -->
+        <div class="merkle-tree">
+            <div class="merkle-title">默克尔树结构示例</div>
+            
+            <div class="tree-level">
+                <div class="tree-node">Root Hash</div>
+            </div>
+            
+            <div class="tree-level">
+                <div class="tree-node">Hash AB</div>
+                <div class="tree-node">Hash CD</div>
+            </div>
+            
+            <div class="tree-level">
+                <div class="tree-node">Hash A</div>
+                <div class="tree-node">Hash B</div>
+                <div class="tree-node">Hash C</div>
+                <div class="tree-node">Hash D</div>
+            </div>
+            
+            <div class="tree-level">
+                <div class="tree-node leaf">Tx1</div>
+                <div class="tree-node leaf">Tx2</div>
+                <div class="tree-node leaf">Tx3</div>
+                <div class="tree-node leaf">Tx4</div>
+            </div>
+        </div>
+        
+        <!-- 图例 -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #3498db;"></div>
+                <span>区块头</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ecf0f1;"></div>
+                <span>区块体</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #27ae60;"></div>
+                <span>交易</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #e74c3c;"></div>
+                <span>哈希节点</span>
+            </div>
+        </div>
+        
+        <!-- 关键特性 -->
+        <div class="features">
+            <h3>区块链数据结构关键特性</h3>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-title">链式结构</div>
+                    <div>每个区块通过哈希值链接到前一个区块，形成不可篡改的链条</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-title">默克尔树</div>
+                    <div>高效验证交易完整性，支持轻量级节点验证</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-title">哈希指针</div>
+                    <div>同时包含数据位置信息和数据完整性验证</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-title">时间戳</div>
+                    <div>确保交易的时间顺序性和不可回滚</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-title">工作量证明</div>
+                    <div>通过计算随机数确保网络安全和一致性</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-title">分布式存储</div>
+                    <div>数据冗余存储在多个节点，提高可用性</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

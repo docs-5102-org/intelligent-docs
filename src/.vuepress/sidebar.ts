@@ -16,7 +16,7 @@ export default sidebar({
       link: "intro",
     },
   ],
-  "/natural-language-processing/":[
+  "/general-llms/":[
     {
       text: "简介",
       link: "intro",
@@ -46,21 +46,25 @@ export default sidebar({
       link: "tools",
     },
     {
-      text: "微软Edge大声朗读功能API调用指南",
+      text: "微软Edge大声朗读API指南",
       link: "microsoft-edge-starter",
     },
     {
-      text: "Microsoft Azure语音服务常见问题",
+      text: "Microsoft Azure语音服务",
       link: "azure-problem",
     }
   ],
   "/ethereum/":[
     {
-      text: "简介",
-      link: "intro",
+      text: "比特币",
+      prefix: "/ethereum/bitcoin",
+      collapsible: true,
+      children: [
+        "intro"
+      ]
     },
     {
-      text: "区块链参考资料",
+      text: "参考资料",
       link: "reference-manual",
     }
   ],

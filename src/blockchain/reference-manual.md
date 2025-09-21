@@ -2,6 +2,7 @@
 title: 区块链参考资料
 category:
   - 区块链
+order: 3 
 ---
 
 # 区块链参考资料
@@ -9,9 +10,10 @@ category:
 ## 📚 入门教程
 
 ### 中文教程
-- [廖雪峰的区块链教程](https://liaoxuefeng.com/books/blockchain/introduction/index.html) - 适合初学者的区块链入门教程
-- [【清华大学区块链课】深入浅出讲web3：从比特币到区块链（全14讲）](https://www.bilibili.com/video/BV1mL411a7jo/?p=3&share_source=copy_web&vd_source=2d29a02d756b0a9a6b3894dc1382844a) - 适合初学者的区块链入门教程
+- [廖雪峰的区块链教程](https://liaoxuefeng.com/books/blockchain/introduction/index.html) - 适合初学者的区块链入门教程-概念篇
+- [【清华大学区块链课】深入浅出讲web3：从比特币到区块链（全14讲）](https://www.bilibili.com/video/BV1mL411a7jo/?p=3&share_source=copy_web&vd_source=2d29a02d756b0a9a6b3894dc1382844a) - 适合初学者的区块链入门教程-概念篇
 - [北京大学肖臻老师《区块链技术与应用》公开课](https://www.bilibili.com/video/BV1Vt411X7JF/?p=5&share_source=copy_web&vd_source=2d29a02d756b0a9a6b3894dc1382844a) - 适合初学者的区块链偏向技术和原理篇
+  - [课堂笔记](https://www.yuque.com/tmfl/block_chain/kqxkk1047hhxv3ee)
 - [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide/) - 全面的区块链技术指南
 - [精通比特币（中文版）](https://github.com/tianmingyun/MasterBitcoin2CN) - 《Mastering Bitcoin》中文翻译版
 
@@ -19,6 +21,7 @@ category:
 - [Mastering Bitcoin](https://github.com/bitcoinbook/bitcoinbook) - Andreas M. Antonopoulos著作
 - [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) - 以太坊权威指南
 - [Blockchain Demo](https://andersbrownworth.com/blockchain/) - 可视化区块链工作原理
+- [Merkle Trie](https://wiki.nebulas.io/en/latest/go-nebulas/design-overview/merkle_trie.html) - 默克尔树和默克尔帕特里树讲解
 
 ## 🔗 主流区块链项目源码
 

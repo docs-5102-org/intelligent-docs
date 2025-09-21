@@ -2,6 +2,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+import { default as rightAnchorPlugin } from 'vuepress-plugin-right-anchor';
 
 export default hopeTheme({
   hostname: "https://mister-hope.github.io",
@@ -63,7 +64,10 @@ export default hopeTheme({
       },
     },
   },
-
+  // 页面目录锚点
+  // toc: {
+  //   levels: [1, 2,],
+  // },
   // 多语言配置
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
@@ -114,12 +118,12 @@ export default hopeTheme({
     vPre: true,
 
     // 取消注释它们如果你需要 TeX 支持
-    // math: {
-    //   // 启用前安装 katex
-    //   type: "katex",
-    //   // 或者安装 mathjax-full
-    //   type: "mathjax",
-    // },
+    math: {
+      // 启用前安装 katex
+      type: "katex",
+      // 或者安装 mathjax-full
+      // type: "mathjax",
+    },
 
     // 如果你需要幻灯片，安装 @vuepress/plugin-revealjs 并取消下方注释
     // revealjs: {
@@ -191,7 +195,6 @@ export default hopeTheme({
     icon: {
       prefix: "fa6-solid:",
     },
-
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     // pwa: {
     //   favicon: "/favicon.ico",

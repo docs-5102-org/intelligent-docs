@@ -13,6 +13,7 @@
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.23",
     "@vuepress/plugin-slimsearch": "2.0.0-rc.110",
+    "katex": "^0.16.22",
     "sass-embedded": "^1.89.2",
     "vue": "^3.5.16",
     "vuepress": "2.0.0-rc.23",
@@ -22,5 +23,8 @@
     "onlyBuiltDependencies": [
       "esbuild"
     ]
+  },
+  "dependencies": {
+    "vuepress-plugin-right-anchor": "2.1.0-rc.2"
   }
 }

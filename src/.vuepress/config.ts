@@ -1,7 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-
-
+import { rightAnchorPlugin } from "vuepress-plugin-right-anchor";
 export default defineUserConfig({
   base: '/', // 兼容 GitHub Pages 的路径
   // base: '/', // 如果不使用 GitHub Pages，可以将 base 设置为根路径
@@ -15,6 +14,9 @@ export default defineUserConfig({
     // 其他meta标签...
   ],
   theme,
+  // 开启 PWA
+  // pwa: true,
+  
  
   // 和 PWA 一起启用
   // shouldPrefetch: false,

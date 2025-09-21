@@ -1,4 +1,4 @@
-# 计算机视觉
+# 计算机视觉/AGI
 
 ## AI绘画教程
 
@@ -27,3 +27,10 @@
 | **实战部署** | Stable Diffusion 腾讯云云原生容器部署实践 | [https://cloud.tencent.com/developer/article/2287310](https://cloud.tencent.com/developer/article/2287310)                                 |
 | **模型推荐** | 推荐的 Checkpoint 模型、LoRA        | [https://www.zhihu.com/question/603580055](https://www.zhihu.com/question/603580055)                                                       |
 | **进阶学习** | SD 无限资源教程                     | [http://www.360doc.com/content/23/0807/00/60764982\_1091472997.shtml](http://www.360doc.com/content/23/0807/00/60764982_1091472997.shtml)  |
+
+## RAG专区分享
+
+RAG 的全称是 Retrieval-Augmented Generation（检索增强生成）。
+它是一种结合了 信息检索 和 大语言模型（LLM）生成 的 AI 技术框架。
+
+- https://waytoagi.feishu.cn/wiki/PUUfwNkwqielBOkbO5RcjnTQnUd

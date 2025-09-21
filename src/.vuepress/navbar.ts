@@ -16,7 +16,7 @@ export default navbar([
   },
   {
     text: '区块链',
-    link: '/ethereum/'
+    link: '/blockchain/'
   },
   {
     text: '大数据',
@@ -28,6 +28,10 @@ export default navbar([
       { text: '💻 服务端技术栈', link: 'https://coding.dzspace.top/' },
       { text: '🐧 Linux', link: 'https://devops.dzspace.top/linux/' },
       { text: 'Docker', icon: 'skill-icons:docker', link: 'https://github.com/tuonioooo/docker' },
+      {
+        text: '🌐 Web和移动开发技术栈',
+        link: 'https://web.dzspace.top',
+      },
     ]
   }
 ]);

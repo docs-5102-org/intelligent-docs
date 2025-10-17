@@ -487,7 +487,7 @@ contract UnicodeMonths {
 
 具体如图：
 
-![alt text](./file/types1.png)
+![alt text](../file/types1.png)
 
 ![alt text](./file/types2.png)
 

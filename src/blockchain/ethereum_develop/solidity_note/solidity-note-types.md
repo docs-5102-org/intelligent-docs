@@ -489,7 +489,7 @@ contract UnicodeMonths {
 
 ![alt text](../file/types1.png)
 
-![alt text](./file/types2.png)
+![alt text](../file/types2.png)
 
 ## 十六进制字面量
 

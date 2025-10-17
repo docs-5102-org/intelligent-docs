@@ -66,8 +66,10 @@ order: 3
 ### 以太坊开发工具
 - **Truffle**: [https://github.com/trufflesuite/truffle](https://github.com/trufflesuite/truffle) - 以太坊开发框架
 - **Hardhat**: [https://github.com/nomiclabs/hardhat](https://github.com/nomiclabs/hardhat) - 以太坊开发环境
+  - [官网](https://hardhat.org/) - 是一个以太坊智能合约开发环境
 - **Remix**: [https://remix.ethereum.org/](https://remix.ethereum.org/) - 在线Solidity IDE
 - **Web3.js**: [https://github.com/web3/web3.js](https://github.com/web3/web3.js) - 以太坊JavaScript API
+- **hackquest**: [https://www.hackquest.io/zh-cn?inviteCode=T4SXBBD0CV](https://www.hackquest.io/zh-cn)
 - **ethers.js**: [https://github.com/ethers-io/ethers.js](https://github.com/ethers-io/ethers.js) - 以太坊库
 
 ### 跨链开发
@@ -80,17 +82,23 @@ order: 3
 - [MIT区块链课程](https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/) - MIT免费公开课
 - [Coursera区块链专业课程(后续需要支付)](https://www.coursera.org/specializations/blockchain) - 系统性学习区块链
 - [edX区块链基础](https://www.edx.org/course/blockchain-fundamentals) - Berkeley大学区块链课程
+- [cryptozombies-游戏方式开发DAPP](https://cryptozombies.io/zh/)
 
 ### 技术博客与社区
 - [区块链技术博客](https://learnblockchain.cn/) - 深入浅出区块链
 - [Ethereum.org](https://ethereum.org/zh/) - 以太坊官方文档
 - [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page) - 比特币技术百科
 - [CoinDesk Learn](https://www.coindesk.com/learn/) - 区块链新闻与学习
+- [炒币博客-币圈老司机](https://medium.com/@bqlsj2022/%E5%90%88%E7%BA%A6%E4%BB%A5%E5%A4%A7%E5%8D%9A%E5%B0%8F%E7%A7%98%E8%AF%80-f2d84783644e)
 
 ### 技术论文
 - [比特币白皮书](https://bitcoin.org/bitcoin.pdf) - 中本聪原始论文
 - [以太坊白皮书](https://ethereum.org/en/whitepaper/) - Vitalik Buterin
 - [区块链论文集](https://github.com/decrypto-org/blockchain-papers) - 重要区块链技术论文
+
+### 稳定币
+
+- [一口气了解稳定币](https://www.bilibili.com/video/BV1SquEzGERq/?share_source=copy_web&vd_source=2d29a02d756b0a9a6b3894dc1382844a)
 
 ## 🔧 实用工具
 

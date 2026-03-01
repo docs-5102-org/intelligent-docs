@@ -167,7 +167,7 @@ export default sidebar({
       children: "structure",
     },
     {
-      text: "📖 文档与介绍",
+      text: "📖 写作助手",
       prefix: "documentation/",
       collapsible: true,
       children: "structure",

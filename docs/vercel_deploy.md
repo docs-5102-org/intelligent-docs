@@ -5,6 +5,7 @@ Vercel部署 `VuePress Theme Hope` 主题的项目
 安装过程参考：[https://theme-hope.vuejs.press/zh/get-started/](https://theme-hope.vuejs.press/zh/get-started/)
 
 ### 部署项目
+
 #### 添加项目
 
 ![](attachments/QQ_1757744989249.png)
@@ -22,5 +23,7 @@ Vercel部署 `VuePress Theme Hope` 主题的项目
 点击 Domains
 
 ![](attachments/QQ_1757745256310.png)
+
 点击Add Domain，这里可以通过CF来代理当前的域名
+
 ![](attachments/QQ_1757745284574.png)

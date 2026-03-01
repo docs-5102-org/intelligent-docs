@@ -130,5 +130,65 @@ export default sidebar({
       text: "简介",
       link: "intro",
     },
+  ],
+  "/prompts/": [
+    {
+      text: "📖 库总览",
+      link: "",
+    },
+    {
+      text: "🎨 图片生成",
+      prefix: "image/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "💻 编程开发",
+      prefix: "programming/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "🌐 Web 开发",
+      prefix: "web-development/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "⚙️ 系统提示词",
+      prefix: "system-prompts/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "📱 应用设计",
+      prefix: "app-design/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "📖 文档与介绍",
+      prefix: "documentation/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "🔄 数据转换",
+      prefix: "data-conversion/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "🎭 UI 原型设计",
+      prefix: "ui-design/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "🗄️ 数据库设计",
+      prefix: "database/",
+      collapsible: true,
+      children: "structure",
+    },
   ]
 });

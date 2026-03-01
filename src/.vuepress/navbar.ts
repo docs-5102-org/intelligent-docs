@@ -23,6 +23,10 @@ export default navbar([
     link: '/big-data/'
   },
   {
+    text: '提示词',
+    link: '/prompts/'
+  },
+  {
     text: '📘 专项文档',
     children: [
       { text: '💻 服务端技术栈', link: 'https://coding.dzspace.top/' },

@@ -155,12 +155,6 @@ export default sidebar({
       children: "structure",
     },
     {
-      text: "⚙️ 系统提示词",
-      prefix: "system-prompts/",
-      collapsible: true,
-      children: "structure",
-    },
-    {
       text: "📱 应用设计",
       prefix: "app-design/",
       collapsible: true,

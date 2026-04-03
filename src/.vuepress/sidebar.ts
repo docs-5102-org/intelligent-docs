@@ -184,5 +184,11 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
+    {
+      text: "😊 表情包",
+      prefix: "emoji-pack/",
+      collapsible: true,
+      children: "structure",
+    },
   ]
 });

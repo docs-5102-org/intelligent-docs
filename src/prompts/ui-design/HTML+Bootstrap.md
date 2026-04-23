@@ -1,5 +1,5 @@
 ---
-title: UI 原型指令 — HTML + Bootstrap 5
+title: UI 原型指令 — HTML + Bootstrap 5 ⭐️⭐️
 order: 3
 category:
   - 提示词
